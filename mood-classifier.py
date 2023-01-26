@@ -8,7 +8,7 @@ mood=pipeline('sentiment-analysis',model='./output_dir')
 if not os.path.exists('output_dir/tf_model.h5'):
         os.system('sh download_model.sh')
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/home',methods=['GET','POST'])
 def classifier():
 
     if request.method=='POST':

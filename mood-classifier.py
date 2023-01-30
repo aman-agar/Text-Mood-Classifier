@@ -4,10 +4,6 @@ import os
 
 app=Flask(__name__)
 
-if not os.path.exists('output_dir/tf_model.h5'):
-        os.system('sh download_model.sh')
-mood=pipeline('sentiment-analysis',model='output_dir')
-
 
 @app.route('/')
 def reset():
@@ -15,6 +11,11 @@ def reset():
 
 @app.route('/hme',methods=['GET','POST'])
 def classifier():
+
+    if not os.path.exists('output_dir/tf_model.h5'):
+        os.system('sh download_model.sh')
+    mood=pipeline('sentiment-analysis',model='output_dir')
+
     try:
         inpText=request.json
         print(inpText)
@@ -24,5 +25,5 @@ def classifier():
 
 if __name__=='__main__':
     from waitress import serve
-    serve(app, host="0.0.0.0", port=8090)
+    serve(app, host="0.0.0.0", port=8000)
     

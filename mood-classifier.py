@@ -4,9 +4,10 @@ import os
 
 app=Flask(__name__)
 
-mood=pipeline('sentiment-analysis',model='./output_dir')
 if not os.path.exists('output_dir/tf_model.h5'):
         os.system('sh download_model.sh')
+mood=pipeline('sentiment-analysis',model='output_dir')
+
 
 @app.route('/')
 def reset():

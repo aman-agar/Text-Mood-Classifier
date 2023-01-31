@@ -16,7 +16,7 @@ mood = pipeline('sentiment-analysis', model='arpanghoshal/EmoRoBERTa')
 
 
 @app.route('/test')
-def trail():
+def trial():
     return "Congrats! Trial running successfully!!"
 
 

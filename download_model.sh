@@ -5,10 +5,15 @@ mkdir -p output_dir
 
 # Individual links for model and its dependencies
 gdown '19N66lDWH2MnTmes-6NXX9oCorF7cK-Rz' -O ./output_dir/
+echo "Downloading 1st file"
 gdown '1o9TBhjnUiQNjXNKR72joCWAmNIdxD_q6' -O ./output_dir/
+echo "Downloading 2nd file"
 gdown '148TEVnDoRHYkOSrPR1n1W5TBy8bNV_HM' -O ./output_dir/
+echo "Downloading 3rd file"
 gdown '1CQ1I5gAuqWq88pQM93cctrChsqVI34nO' -O ./output_dir/
+echo "Downloading 4th file"
 gdown '1-QKuRjkU6IfQx9u-BOAyyZouLvPRw7vb' -O ./output_dir/
+echo "Downloading 5th file"
 gdown '1JYenUSfhDJGEW5cRuvsNWBUq69JkAMj7' -O ./output_dir/
 
 
